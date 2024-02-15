@@ -3,7 +3,7 @@ const likeControler=require('../Controller/likeControler');
 const { verifyJwt } = require('../Token/verifyJwt');
 const router=express.Router();
 
-router.route('/').post(verifyJwt,likeControler.createLike).get(verifyJwt,likeControler.getLikes);
-router.route('/:id').get().delete(verifyJwt,likeControler.deleteLike);
+router.route('/').post(likeControler.createLike).get(likeControler.getLikes);
+router.route('/:id').get().delete(likeControler.deleteLike);
 
 module.exports=router

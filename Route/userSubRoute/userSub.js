@@ -4,8 +4,8 @@ const userController=require('../../Controller/userController');
 const { verify } = require('jsonwebtoken');
 const { verifyJwt } = require('../../Token/verifyJwt');
 const router=express.Router();
-router.route('/').post(userController.createUser).get(verifyJwt,userController.getUser)
-router.route('/stack').get(verifyJwt,userController.countUser)
-router.route('/:id').get(userController.getUserOnebyId).patch(verifyJwt,userController.updateProfile)
+router.route('/').post(userController.createUser).get(userController.getUser)
+router.route('/stack').get(userController.countUser)
+router.route('/:id').get(userController.getUserOnebyId).patch(userController.updateProfile)
 
 module.exports=router
