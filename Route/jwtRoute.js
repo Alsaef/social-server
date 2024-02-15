@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
         expiresIn: expiration
       });
     //   console.log(token)
-      res.send({ token });
+      res.json({ token });
     } catch (error) {
       console.error('Error generating token:', error);
       res.status(500).json({ message: 'Token generation failed' });
