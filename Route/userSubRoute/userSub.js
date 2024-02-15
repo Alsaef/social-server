@@ -1,7 +1,6 @@
 const express=require('express');
 
 const userController=require('../../Controller/userController');
-const { verify } = require('jsonwebtoken');
 const { verifyJwt } = require('../../Token/verifyJwt');
 const router=express.Router();
 router.route('/').post(userController.createUser).get(userController.getUser)
