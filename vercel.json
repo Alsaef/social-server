@@ -8,13 +8,13 @@
     ],
     "routes": [
       {
-        "src": "index.js",
+        "src": "api/v1/",
         "dest": "index.js"
       }
     ],
     "headers": [
       {
-        "source": "/api/v1/",
+        "source": "/api/v1/jwt",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
