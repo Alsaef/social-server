@@ -8,7 +8,7 @@
     ],
     "routes": [
       {
-        "src": "https://social-server-blond.vercel.app/",
+        "src": "/",
         "dest": "index.js"
       }
     ],
