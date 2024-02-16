@@ -10,6 +10,7 @@ router.post('/', (req, res) => {
         expiresIn: expiration
       });
     //   console.log(token)
+    res.setHeader('Access-Control-Allow-Origin', 'https://social-server-blond.vercel.app');
       res.json({ token });
     } catch (error) {
       console.error('Error generating token:', error);
