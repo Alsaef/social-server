@@ -14,6 +14,9 @@ router.post('/', (req, res) => {
       const token = jwt.sign(userInfo, process.env.SECURE_TOKEN, {
         expiresIn: expiration
       });
+      res.setHeader('Access-Control-Allow-Origin', 'https://social-server-blond.vercel.app');
+        res.setHeader('Access-Control-Allow-Methods', 'POST');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     //   console.log(token)
       res.json({ token });
     } catch (error) {
