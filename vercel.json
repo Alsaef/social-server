@@ -14,7 +14,7 @@
     ],
     "headers": [
       {
-        "source": "/api/v1/jwt",
+        "source": "https://social-server-blond.vercel.app/api/v1/jwt",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
