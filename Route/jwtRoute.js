@@ -1,11 +1,6 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const cors = require('cors');
-
-router.use(cors({
-  origin: 'https://social-server-blond.vercel.app'
-}));
 router.post('/', (req, res) => {
     try {
       const userInfo = req.body;
