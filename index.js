@@ -5,8 +5,9 @@ const mongoose = require('mongoose');
 const port =process.env.PORT || 3000
 require('dotenv').config()
 app.use(express.json())
-app.use(cors())
-
+app.use(cors({
+  origin: '*' // Specify the allowed origin here, or '*' to allow all origins
+}));
 // DB Connection
 
 mongoose.connect(process.env.DB_CONNECTION).then(()=>{
