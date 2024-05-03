@@ -1,27 +1,15 @@
 {
-    "version": 2,
-    "builds": [
+  "version":2,
+  "builds": [
       {
-        "src": "index.js",
-        "use": "@vercel/node"
+          "src": "index.js",
+          "use": "@vercel/node"
       }
-    ],
-    "routes": [
+  ],
+  "routes": [
       {
-        "src": "api/v1/",
-        "dest": "index.js"
+        "src": "/(.*)",
+        "dest": "/"
       }
-    ],
-    "headers": [
-      {
-        "source": "/api/v1/jwt",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "https://social-server-blond.vercel.app"
-          }
-        ]
-      }
-    ]
-  }
-  
+  ]
+}
