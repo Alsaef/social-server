@@ -7,7 +7,8 @@ const port =process.env.PORT || 3000
 require('dotenv').config()
 app.use(express.json())
 app.use(cors({
-  origin: '*' // Specify the allowed origin here, or '*' to allow all origins
+  origin: '*',
+  allowMethods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
 }));
 // DB Connection
 
