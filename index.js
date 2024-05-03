@@ -27,7 +27,7 @@ app.use('/api/v1/users',userSub)
 app.use('/api/v1/post',postRouter)
 app.use('/api/v1/comment',commentRoute)
 app.use('/api/v1/like',likeRoute)
-app.post('/api/v1/jwt',(req,res)=>{})
+app.post('/api/v1/jwt',jwtRoute)
 
 app.get('/', (req, res) => {
   res.send('Server Running!')
