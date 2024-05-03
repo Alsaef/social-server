@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const cors=require('cors')
+const cors=require('micro-cors')
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const port =process.env.PORT || 3000
